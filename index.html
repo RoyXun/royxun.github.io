@@ -299,8 +299,8 @@
       
         
           <p>之前做的几个项目对浏览器要求不是很高，IE只要样式不要错乱得离谱就行，低版本干脆直接忽略。遇到需要兼容高版本IE时，就在 <code>head</code>里添加meta信息:</p>
-<pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
-</code></pre><p>加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新项目，发现这句设置居然莫名其妙地失效,才开始各种查阅它的相关用法。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新项目，发现这句设置居然莫名其妙地失效,才开始各种查阅它的相关用法。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/04/13/X-UA-Compatible-IE-edge-chrome-1/#more" rel="contents">
               阅读全文 &raquo;

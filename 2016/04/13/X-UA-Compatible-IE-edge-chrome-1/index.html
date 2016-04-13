@@ -81,21 +81,21 @@
 
 
 <meta name="description" content="之前做的几个项目对浏览器要求不是很高，IE只要样式不要错乱得离谱就行，低版本干脆直接忽略。遇到需要兼容高版本IE时，就在 head里添加meta信息:
-&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=edge,chrome=1&amp;quot;&amp;gt;
-加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Co">
+1&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&amp;gt;
+加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新">
 <meta property="og:type" content="article">
 <meta property="og:title" content="X-UA-Compatible IE=edge,chrome=1">
 <meta property="og:url" content="http://xunqilong.com/2016/04/13/X-UA-Compatible-IE-edge-chrome-1/index.html">
 <meta property="og:site_name" content="XQL's Notes">
 <meta property="og:description" content="之前做的几个项目对浏览器要求不是很高，IE只要样式不要错乱得离谱就行，低版本干脆直接忽略。遇到需要兼容高版本IE时，就在 head里添加meta信息:
-&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=edge,chrome=1&amp;quot;&amp;gt;
-加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Co">
-<meta property="og:updated_time" content="2016-04-13T16:20:50.012Z">
+1&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&amp;gt;
+加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新">
+<meta property="og:updated_time" content="2016-04-13T16:35:30.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="X-UA-Compatible IE=edge,chrome=1">
 <meta name="twitter:description" content="之前做的几个项目对浏览器要求不是很高，IE只要样式不要错乱得离谱就行，低版本干脆直接忽略。遇到需要兼容高版本IE时，就在 head里添加meta信息:
-&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=edge,chrome=1&amp;quot;&amp;gt;
-加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Co">
+1&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&amp;gt;
+加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新">
 
 
 
@@ -300,8 +300,8 @@
 
       
         <p>之前做的几个项目对浏览器要求不是很高，IE只要样式不要错乱得离谱就行，低版本干脆直接忽略。遇到需要兼容高版本IE时，就在 <code>head</code>里添加meta信息:</p>
-<pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
-</code></pre><p>加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新项目，发现这句设置居然莫名其妙地失效,才开始各种查阅它的相关用法。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>加上这句就能让IE表现得像个正常浏览器，所以一直没深究过X-UA-Compatible的用法。直到最近接手新项目，发现这句设置居然莫名其妙地失效,才开始各种查阅它的相关用法。</p>
 <a id="more"></a>
 <p>项目要求兼容IE9，便在条件注释中判断浏览器版本，如果低于IE9就重定向到浏览器不兼容提示页面。meta信息设置了，代码好像也写得没错，但是当用IE9去访问测试环境页面时，发现页面居然默认开启兼容模式而被重定向了。对于这种最不拿手的兼容性问题，当然是谷歌了。果然不负众望，在<a href="https://msdn.microsoft.com/zh-cn/library/jj676915.aspx" target="_blank" rel="external">MSDN</a>中发现这么一句：</p>
 <blockquote>
