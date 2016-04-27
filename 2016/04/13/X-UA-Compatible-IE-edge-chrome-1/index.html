@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="XQL's Notes">
 <meta property="og:description" content="为了让IE浏览器使用最高版本文档模式渲染页面，常常在html中加入这句：
 1&amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&amp;gt;">
-<meta property="og:updated_time" content="2016-04-27T16:25:33.458Z">
+<meta property="og:updated_time" content="2016-04-27T16:29:26.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="X-UA-Compatible IE=edge,chrome=1">
 <meta name="twitter:description" content="为了让IE浏览器使用最高版本文档模式渲染页面，常常在html中加入这句：
@@ -311,7 +311,7 @@
 <p>The X-UA-Compatible header isn’t case sensitive; however, it must appear in the header of the webpage (the HEAD section) before all other elements except for the title element and other meta elements.</p>
 </blockquote>
 <p>之前做项目时，因为同事把埋点脚本插入到X-UA-Compatible标头前面，导致条件注释判断有误，排查了半天，这个坑<a href="http://www.99css.com/" target="_blank" rel="external">99css</a>在六年前也踩过（<a href="http://www.99css.com/463/" target="_blank" rel="external">IE8 X-UA-Compatible 失效？</a>）。</p>
-<h2 id="浏览器模式-amp-文档模式"><a href="#浏览器模式-amp-文档模式" class="headerlink" title="浏览器模式&amp;文档模式"></a>浏览器模式&amp;文档模式</h2><p>前面多次提到文档模式(document mode)，究竟什么是文档模式？它和浏览器模式有什么不同？<br>概括地说，就是<strong>浏览器模式</strong>决定IE发给服务器的用户代理(UA)字符串、浏览器的默认文档模式以及IE如何解析条件注释；<strong>文档模式</strong>指定IE引擎如何渲染页面，修改文档模式会刷新页面，但不会重新向服务器发送UA字符串以及从服务器获取新标记。<br>这里先点到为止，以后有空再细说，感兴趣的可以看看这篇博客<a href="https://imququ.com/post/browser-mode-and-document-mode-in-ie.html" target="_blank" rel="external">关于浏览器模式和文本模式的困惑</a></p>
+<h2 id="浏览器模式-amp-文档模式"><a href="#浏览器模式-amp-文档模式" class="headerlink" title="浏览器模式&amp;文档模式"></a>浏览器模式&amp;文档模式</h2><p>前面多次提到文档模式(document mode)，究竟什么是文档模式？它和浏览器模式有什么不同？<br>概括地说，就是<strong>浏览器模式</strong>决定IE发给服务器的用户代理(UA)字符串、浏览器的默认文档模式以及IE如何解析条件注释；<strong>文档模式</strong>指定IE引擎如何渲染页面，修改文档模式会刷新页面，但不会重新向服务器发送UA字符串以及从服务器获取新标记。<br>这里先点到为止，以后有空再细说，感兴趣的可以看看这篇博客: <a href="https://imququ.com/post/browser-mode-and-document-mode-in-ie.html" target="_blank" rel="external">关于浏览器模式和文本模式的困惑</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li><p>通过在网页的<code>head</code>中指定<code>X-UA-Compatible</code>信息，设置文档模式</p>
  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=Edge"</span>&gt;</span></span><br></pre></td></tr></table></figure>
